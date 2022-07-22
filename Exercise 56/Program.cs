@@ -144,7 +144,11 @@ void MinSumElementsInRows(int[,] collection)
        
     }
 
-    if (rememberRow == 1)
+    if (rememberRow == 0)
+    {
+        Console.WriteLine("Answer: " + $"{rememberRow + 1}" + "-st row.");
+    }
+    else if (rememberRow == 1)
     {
         Console.WriteLine("Answer: " + $"{rememberRow + 1}" + "-nd row.");
     }
