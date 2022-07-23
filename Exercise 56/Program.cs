@@ -112,14 +112,13 @@ void MinSumElementsInRows(int[,] collection)
     double minSum = 0;
     double sumRow = 0;
     double sum0 = 0;
+    
     for (int index = 0; index < 1; index++)
     {
         for (int jndex = 0; jndex < collection.GetLength(1); jndex++)
         {
             sum0 = sum0 + collection[index, jndex];
         }
-
-        sum0 = sum0 / collection.GetLength(1);
     
         minSum = sum0;
         rememberRow = index;
@@ -134,14 +133,11 @@ void MinSumElementsInRows(int[,] collection)
             sumRow = sumRow + collection[index, jndex];
         }
 
-        sumRow = sumRow / collection.GetLength(1);
-
         if (minSum > sumRow)
         {
             minSum = sumRow;
             rememberRow = index;
         }    
-       
     }
 
     if (rememberRow == 0)
